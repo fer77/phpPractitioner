@@ -1,6 +1,6 @@
 <?php
 
-//variable
+// VARIABLES
 $greeting = "Hello";
 $name = "Fernando";
 
