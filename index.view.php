@@ -16,7 +16,7 @@
 
  <h1>
 <?=
-// <?php echo is equivelent to <?= 
+// <?php echo is equivelent to <?=
 
 "$greeting"
 
@@ -25,5 +25,15 @@
 <!-- PHPs closing tag ?> is necessary only when separating PHP code from other code, like in this example. -->
 
     </header>
+
+    <ul>
+        <?php foreach ($names as $name) : ?>
+
+        <li><?= $name; ?></li>
+
+        <?php endforeach ?>
+    </ul>
+
+
   </body>
 </html>
