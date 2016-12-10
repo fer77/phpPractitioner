@@ -26,13 +26,25 @@
 
     </header>
 
+<!-- Loop through each array value -->
     <ul>
-        <?php foreach ($names as $name) : ?>
+        <?php foreach ($belchers as $member) : ?>
 
-        <li><?= $name; ?></li>
+        <li><?= $member; ?></li>
 
         <?php endforeach ?>
     </ul>
+
+<!-- Loop through each $key and $value -->
+    <ul>
+        <?php foreach ($belcher as $key => $self) : ?>
+
+
+        <li><strong><?= $key; ?></strong> <?= $self; ?></li>
+
+        <?php endforeach ?>
+    </ul>
+
 
 
   </body>
