@@ -32,7 +32,7 @@
 
         <li><?= $member; ?></li>
 
-        <?php endforeach ?>
+        <?php endforeach; ?>
     </ul>
 
 <!-- Loop through each $key and $value -->
@@ -42,10 +42,26 @@
 
         <li><strong><?= $key; ?></strong> <?= $self; ?></li>
 
-        <?php endforeach ?>
+        <?php endforeach; ?>
     </ul>
+<!-- Use helper functions to do simple things like capitalize the first letter of a word that may be comming from an  outside source. -->
+    <h1><?= ucwords('tasks for the day'); ?></h1>
 
-
+    <ul>
+        <li>
+            <strong>Name: </strong> <?= $tasks['title']; ?>
+        </li>
+        <li>
+            <strong>Due Date: </strong> <?= $tasks['due']; ?>
+        </li>
+        <li>
+            <strong>Who's Doing This: </strong> <?= $tasks['assigned']; ?>
+        </li>
+        <li>
+        <!-- true ? 'do something' : 'so something else' -->
+            <strong>Done: </strong><?= $tasks['completed'] ? 'Complete' : 'Incomplete'; ?>
+        </li>
+    </ul>
 
   </body>
 </html>
