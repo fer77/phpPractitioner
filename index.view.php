@@ -60,7 +60,16 @@
         <li>
         <!-- true ? 'do something' : 'so something else' -->
             <strong>Done: </strong><?= $tasks['completed'] ? 'Complete' : 'Incomplete'; ?>
-        </li>
+        <!-- Ternary vs conditional. It all depends on the amount of mark up or code to be written -->
+         </li>
+         <li><strong>Recuring: </strong>
+        <!-- Conditionals can also be written in php -->
+        <?php if ($tasks['recuring']) : ?>
+            Yes.
+        <?php else : ?>
+            Luckly no.
+        <?php endif; ?>
+         </li>
     </ul>
 
   </body>

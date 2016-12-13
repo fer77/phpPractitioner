@@ -4,7 +4,8 @@
 	'title' => 'clean the tables',
 	'due' => 'daily',
 	'assigned' => 'Tina',
-	'completed' => false
+	'completed' => false,
+	'recuring' => true
 	];
 
 require 'index.view.php';
