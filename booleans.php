@@ -8,4 +8,4 @@
 	'recuring' => true
 	];
 
-require 'index.view.php';
+

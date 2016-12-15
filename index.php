@@ -11,3 +11,4 @@ $greeting = "Hello: ";
 // To link to your html file add a 'require' to this file:
 require 'arrays.php';
 require 'booleans.php';
+require 'functions-notes.php';
