@@ -1,6 +1,6 @@
 <?php 
 //* 1
-require 'functions.php';
+//require 'functions.php';
 //* 2
 //* Create a file named 'functions.php'.
 //* 3
@@ -34,7 +34,7 @@ $belchers = [
 //* or
 //dd('Hello');
 //* or
-dd(['Bob', 'Linda', 'Tina', 'Gene']);
+//dd(['Bob', 'Linda', 'Tina', 'Gene']);
 
-require 'index.view.php';
+// require 'index.view.php';
  ?>

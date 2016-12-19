@@ -27,23 +27,23 @@
     </header>
 
 <!-- Loop through each array value -->
-    <ul>
+    <!-- <ul>
         <?php foreach ($belchers as $member) : ?>
 
         <li><?= $member; ?></li>
 
         <?php endforeach; ?>
-    </ul>
+    </ul> -->
 
 <!-- Loop through each $key and $value -->
-    <ul>
+    <!-- <ul>
         <?php foreach ($belcher as $key => $self) : ?>
 
 
         <li><strong><?= $key; ?></strong> <?= $self; ?></li>
 
         <?php endforeach; ?>
-    </ul>
+    </ul> -->
 <!-- Use helper functions to do simple things like capitalize the first letter of a word that may be comming from an  outside source. -->
     <h1><?= ucwords('tasks for the day'); ?></h1>
 
@@ -58,7 +58,7 @@
             <strong>Who's Doing This: </strong> <?= $tasks['assigned']; ?>
         </li>
         <li>
-        <!-- true ? 'do something' : 'so something else' -->
+        <!-- true ? 'do something' : 'do something else' -->
             <strong>Done: </strong><?= $tasks['completed'] ? 'Complete' : 'Incomplete'; ?>
         <!-- Ternary vs conditional. It all depends on the amount of mark up or code to be written -->
          </li>
@@ -70,6 +70,18 @@
             Luckly no.
         <?php endif; ?>
          </li>
+    </ul>
+
+    <ul>
+    <?php foreach ($tasks as $task) : ?>
+        <li>
+            <?php if ($task->completed) : ?>
+                <strike><?= $task->description; ?></strike>
+            <?php else: ?>
+            <?= $task->description; ?>
+            <?php endif; ?>
+        </li>
+     <?php endforeach; ?>
     </ul>
 
   </body>
