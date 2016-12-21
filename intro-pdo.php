@@ -12,25 +12,32 @@
 // 		die($e->getMessage()); //* Gives you the error.
 // 	}
 // }
-$pdo = connectToDb();
+//$pdo = connectToDb();
+
+//*moved to bootstrap.php:
+// $pdo = Connection::make();
+// $query = new QueryBuilder($pdo);
+
+$tasks = $query->selectAll('todos');
+
+//die(dd($tasks));
 
 //function fetchAllTasks($pdo) {
-	//* 1. Preparing an SQL querry:
-	//$statement = $pdo->prepare('select * from todos');
-	//* Do not use 'mysql_connect();' always use PDO.
+    //* 1. Preparing an SQL querry:
+    //$statement = $pdo->prepare('select * from todos');
+    //* Do not use 'mysql_connect();' always use PDO.
 
-	//* 2. Execute the statement:
-	//$statement->execute();
+    //* 2. Execute the statement:
+    //$statement->execute();
 
-	//var_dump($statement->fetchAll());
-	//dd($statement->fetchAll(PDO::FETCH_OBJ)); //* PDO::FETCH_OBJ fetches results and places them  in objects.
-	//$tasks = $statement->fetchAll(PDO::FETCH_OBJ);
-	//$tasks = $statement->fetchAll(PDO::FETCH_CLASS, 'Task');$statement->fetchAll(PDO::FETCH_CLASS, 'Task');
-	//return $statement->fetchAll(PDO::FETCH_CLASS, 'Task');$statement->fetchAll(PDO::FETCH_CLASS, 'Task');
+    //var_dump($statement->fetchAll());
+    //dd($statement->fetchAll(PDO::FETCH_OBJ)); //* PDO::FETCH_OBJ fetches results and places them  in objects.
+    //$tasks = $statement->fetchAll(PDO::FETCH_OBJ);
+    //$tasks = $statement->fetchAll(PDO::FETCH_CLASS, 'Task');$statement->fetchAll(PDO::FETCH_CLASS, 'Task');
+    //return $statement->fetchAll(PDO::FETCH_CLASS, 'Task');$statement->fetchAll(PDO::FETCH_CLASS, 'Task');
 //}
-$tasks = fetchAllTasks($pdo);
+//$tasks = fetchAllTasks($pdo);
 
 //var_dump($tasks[0]->description);
 
 require 'index.view.php';
- ?>

@@ -1,5 +1,27 @@
 <?php 
 
+//* Think of classes like this:
+//* You want to build a house so you need a contractor, who in return needs a plumber, an electrician, and an architect...
+//class Contractor {
+	//* Define what you need here:
+//	protected $plumber;
+//	protected $electrician;
+//	protected $architect;
+
+//	function __construct($plumber, $electrician, $architect) {
+		//* This is the place where a class can declare what its dependencies are.
+//		$this->plumber = $plumber; //* Any plumber
+//		$this->electrician = $electrician; //* Any electrician
+//		$this->architect = $architect; //* Any architect
+//	}
+//	public function performWork() {
+		//* plumber
+		//* electrician
+		//* architect
+		//* The contractor needs these guys and can require them in a __construct function:
+//	}
+//}
+
 //* Good practice is to name your classes nouns.  Classes are representations or blu prints for a concept in your app.
 class Task {
 	//* Properties:

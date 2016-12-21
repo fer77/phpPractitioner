@@ -1,6 +1,7 @@
 <?php
 //require reusable code in a file, like functions, etc at the top here:
 require 'functions.php';
+$query = require 'bootstrap.php';
 require 'Task.php';
 
 
