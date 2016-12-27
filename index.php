@@ -30,4 +30,4 @@ require 'intro-pdo.php';
 
 //* This will require the file that is returned to us:
  //require Router::load('routes.php')->direct($uri);
- require Router::load('routes.php')->direct(Request::uri());
+ require Router::load('routes.php')->direct(Request::uri(), Request::method()); //* This will tell the router what type of request it is.

@@ -2,7 +2,10 @@
 
   class Router
   {
-    protected $routes = [];
+    public $routes = [
+      'GET' => [],
+      'POST' => []
+    ];
 
     public static function load($file)
     //* A static function is not an instance method, it is more of a global mthod that can be called at any time.
@@ -14,17 +17,33 @@
       return $router;
     }
 
-    public function define($routes)
+    public function get($uri, $controller)
     {
-      $this->routes = $routes;
+      //$this->routes['GET'][$uri] = $controller; is doing this:
+      // $getRoutes = [];
+      // $getRoutes[] = 'foo'; //* When [] is left empty $getRoutes does something like this: 0 => 'foo'.
+      // $getRoutes[] = 'bar'; //* When [] is left empty $getRoutes does something like this: 1 => 'bar'.
+      // $getRoutes['uri'] = 'baz'; //* When [] is left empty $getRoutes does something like this: uri, or name, or date... => 'baz'.
+      // [
+      //   0 => 'foo',
+      //   1 => 'bar',
+      //   'uri' => 'baz'
+      // ]
+      //Ultimatly will be doing something like: $getRoutes = ['name'] = controllers/foo.php;
+
+      $this->routes['GET'][$uri] = $controller;
+    }
+    public function post($uri, $controller)
+    {
+      $this->routes['POST'][$uri] = $controller;
     }
 
-  public function direct($uri)
+  public function direct($uri, $requestType)
   {
     //* example.com/about/culture
-    if (array_key_exists($uri, $this->routes)) {
+    if (array_key_exists($uri, $this->routes[$requestType])) {
     //* array_key_exists will look through our array of routes and will look for a key that matches.
-    return $this->routes[$uri];
+    return $this->routes[$requestType][$uri];
 
     }
 
