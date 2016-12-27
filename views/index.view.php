@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
-  <head>
+   <head>
     <meta charset="utf-8">
     <title>Document</title>
     <style media="screen">
@@ -11,14 +11,20 @@
       }
         </style>
     </head>
-        <body>
+        <body> -->
+          <?php require('partials/head.php') ?>
 
+
+          <!-- For any piece of reusable code like this, we include it in a 'partials' folder.
           <nav>
             <ul>
-              <li><a href="/about.php">About Page</a></li>
-              <li><a href="/contact.php">Contact Page</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="about/culture">About our Culture</a></li>
             </ul>
-          </nav>
+          </nav> -->
+          <!-- <?php require('partials/nav.php') ?> moved to partials/head.php -->
 
           <header>
              <h1>
@@ -88,5 +94,6 @@
        <?php endforeach; ?>
       </ul>
 
-  </body>
-</html>
+  <!-- </body>
+</html> -->
+<?php require('partials/footer.php') ?>
