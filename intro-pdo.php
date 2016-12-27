@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 //* Handling exceptions.  These can be things like mysql not being installed in our machine, etc...
 //* Always wrap PDOs in try/catch.
@@ -18,7 +18,7 @@
 // $pdo = Connection::make();
 // $query = new QueryBuilder($pdo);
 
-$tasks = $query->selectAll('todos');
+//$tasks = $query->selectAll('todos');
 
 //die(dd($tasks));
 
@@ -40,4 +40,4 @@ $tasks = $query->selectAll('todos');
 
 //var_dump($tasks[0]->description);
 
-require 'index.view.php';
+//require 'index.view.php';
