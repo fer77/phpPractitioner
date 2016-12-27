@@ -1,19 +1,4 @@
-<!-- <!DOCTYPE html>
-<html>
-   <head>
-    <meta charset="utf-8">
-    <title>Document</title>
-    <style media="screen">
-      header {
-        background: #e3e3e3;
-        padding: 2em;
-        text-align: center;
-      }
-        </style>
-    </head>
-        <body> -->
-          <?php require('partials/head.php') ?>
-
+<?php require('partials/head.php') ?>
 
           <!-- For any piece of reusable code like this, we include it in a 'partials' folder.
           <nav>
@@ -94,6 +79,4 @@
        <?php endforeach; ?>
       </ul>
 
-  <!-- </body>
-</html> -->
 <?php require('partials/footer.php') ?>
