@@ -3,6 +3,6 @@
 $tasks = $app['database']->selectAll('todos');
 
 require 'views/index.view.php';
-require 'arrays/arrays.php'
+require 'arrays/filters.php'
 
  ?>
