@@ -47,7 +47,7 @@
 
     }
 
-    throw new Exception('No route defined for this URI.');
+    throw new Exception('No route defined for this URI.'); //* Error to get if an URI that doesn't exist is typed.
 
   }
 }

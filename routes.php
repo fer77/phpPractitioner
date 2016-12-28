@@ -9,8 +9,10 @@
   //   'names' => 'controllers/add-name.php' // only for POST types.
   // ]);
 
-  $router->get('', 'controllers/index.php');
+
+  $router->get('', 'controllers/index.php'); //* This allows us to not be linked to a file name, all we have to do is change the uri and point it to the file we need.
   $router->get('about', 'controllers/about.php');
+  $router->get('contact', 'controllers/contact.php');
   $router->get('about/culture', 'controllers/about-culture.php');
   $router->post('names', 'controllers/add-name.php');
 

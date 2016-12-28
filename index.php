@@ -1,7 +1,7 @@
 <?php
 //require reusable code in a file, like functions, etc at the top here:
 require 'functions.php';
-require 'Task.php';
+require 'notes/Task.php';
 require 'core/bootstrap.php';
 
 //$router = new Router;
@@ -19,15 +19,17 @@ $greeting = "Hello: ";
 //require 'booleans.php';
 //require 'functions-notes.php';
 //require 'classes.php';
-require 'intro-pdo.php';
+require 'notes/intro-pdo.php';
 //require 'routes.php';
 
 // dd(trim($_SERVER['REQUEST_URI'], '/'));
-//$uri = trim($_SERVER['REQUEST_URI'], '/'); //* Moved to core/request.php
+//$uri = trim($_SERVER['REQUEST_URI'], '/'); //* Moved to core/Request.php
 //* trim get rid of white spaces, if an argument is passed it'll get rid of that, in this case we pass '/'
 
 //require $router->direct($uri);
 
 //* This will require the file that is returned to us:
- //require Router::load('routes.php')->direct($uri);
+//require Router::load('routes.php')->direct($uri);
  require Router::load('routes.php')->direct(Request::uri(), Request::method()); //* This will tell the router what type of request it is.
+                                  //* Router->direct determines the controller we require.
+                                              //* Request::uri is required(loaded) in our bootstrap file.
