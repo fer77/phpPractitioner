@@ -11,7 +11,7 @@ class Request //* Fetches information about the current browser request.
   }
   public static function method()
   {
-    return $_SERVER['REQUEST_METHOD']; //* this will give us GET or POST
+    return $_SERVER['REQUEST_METHOD']; //* this will give us the type: GET, POST, ...
   }
 }
 

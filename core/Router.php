@@ -19,19 +19,18 @@
 
     public function get($uri, $controller)
     {
-      //$this->routes['GET'][$uri] = $controller; is doing this:
-      // $getRoutes = [];
-      // $getRoutes[] = 'foo'; //* When [] is left empty $getRoutes does something like this: 0 => 'foo'.
-      // $getRoutes[] = 'bar'; //* When [] is left empty $getRoutes does something like this: 1 => 'bar'.
-      // $getRoutes['uri'] = 'baz'; //* When [] is left empty $getRoutes does something like this: uri, or name, or date... => 'baz'.
-      // [
-      //   0 => 'foo',
-      //   1 => 'bar',
-      //   'uri' => 'baz'
-      // ]
-      //Ultimatly will be doing something like: $getRoutes = ['name'] = controllers/foo.php;
-
-      $this->routes['GET'][$uri] = $controller;
+      $this->routes['GET'][$uri] = $controller; //* is doing this:
+      //* $getRoutes = [];
+      //* $getRoutes[] = 'foo'; //* When [] is left empty $getRoutes does something like this: 0 => 'foo'.
+      //* $getRoutes[] = 'bar'; //* When [] is left empty $getRoutes does something like this: 1 => 'bar'.
+      //* $getRoutes['uri'] = 'baz'; //* When [] is left empty $getRoutes does something like this: uri, or name, or date... => 'baz'.
+      //* [
+      //*   0 => 'foo',
+      //*   1 => 'bar',
+      //*   'uri' => 'baz'
+      //* ]
+      //* Ultimatly will be doing something like:
+      //* $getRoutes = ['name'] = controllers/foo.php;
     }
     public function post($uri, $controller)
     {

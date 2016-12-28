@@ -1,6 +1,6 @@
 <?php require('partials/head.php') ?>
 
-          <!-- For any piece of reusable code like this, we include it in a 'partials' folder.
+<!-- For any piece of reusable code like this, we include it in a 'partials' folder.
           <nav>
             <ul>
               <li><a href="/">Home</a></li>
@@ -8,8 +8,8 @@
               <li><a href="/contact">Contact</a></li>
               <li><a href="about/culture">About our Culture</a></li>
             </ul>
-          </nav> -->
-          <!-- <?php require('partials/nav.php') ?> moved to partials/head.php -->
+          </nav>
+          <?php require('partials/nav.php') ?> moved to partials/head.php -->
 
           <header>
              <h1>
@@ -34,7 +34,6 @@
     <!-- <ul>
         <?php foreach ($belcher as $key => $self) : ?>
 
-
         <li><strong><?= $key; ?></strong> <?= $self; ?></li>
 
         <?php endforeach; ?>
@@ -45,7 +44,7 @@
 
      <!-- This form will submit a GET request to our /names -->
      <form method="POST" action="/names">
-       <!-- Add a route for this information to go somewhere -->
+       <!-- Action adds a "route" for this information to go somewhere -->
        <!-- If no "name" attribute is included with the <input> then it will not be submitted -->
        <input name="name"></input>
        <button type="submit">Submit</button>
