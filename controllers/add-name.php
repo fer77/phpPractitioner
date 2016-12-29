@@ -6,6 +6,11 @@
 //* This gets any GET or POST values.
 //dd($_REQUEST);
 //* or be explicit:
-dd('You typed ' . $_POST['name']);
+//dd('You typed ' . $_POST['name']);
+
+$app['database']->insert('users', ['name' => $_POST['name']]);
+
+//* Redirect after done with our query.
+header('Location: /');
 
  ?>

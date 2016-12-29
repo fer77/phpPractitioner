@@ -1,6 +1,6 @@
 <?php
 //The controller will now interact with the database:
-$tasks = $app['database']->selectAll('todos');
+$users = $app['database']->selectAll('users');
 
 require 'views/index.view.php';
 require 'arrays/filters.php'
