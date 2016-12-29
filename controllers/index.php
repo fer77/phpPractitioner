@@ -3,6 +3,6 @@
 $users = $app['database']->selectAll('users');
 
 require 'views/index.view.php';
-require 'arrays/filters.php'
+//require 'arrays/filters.php'
 
  ?>

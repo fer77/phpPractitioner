@@ -39,11 +39,9 @@
         <?php endforeach; ?>
     </ul> -->
 
-<?php foreach ($users as $user) : ?>
-
-  <li><?= $user->name; ?>
-
-<?php endforeach ?>
+    <?php foreach ($users as $user) : ?>
+        <li><?= $user->name; ?></li>
+    <?php endforeach; ?>
 <!-- Use helper functions to do simple things like capitalize the first letter of a word that may be comming from an  outside source. -->
      <h1><?= ucwords('submit your name'); ?></h1>
 

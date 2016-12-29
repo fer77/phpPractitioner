@@ -30,10 +30,10 @@ class QueryBuilder {
 			//* Build a query:
 			$statement = $this->pdo->prepare($sql);
 			//* Execute the query:
-			$statement->execute();
+			$statement->execute($parameters);
 		} catch (Exception $e) {
 			//* Here we can re-direct to an error page or a 404.
-			die('Whoops, you suck.');
+			die('Whoops, you suck!');
 		}
 	}
 }
