@@ -1,5 +1,6 @@
 <?php
 //require reusable code in a file, like functions, etc at the top here:
+require 'vendor/autoload.php';
 require 'functions.php';
 require 'notes/Task.php';
 require 'core/bootstrap.php';
