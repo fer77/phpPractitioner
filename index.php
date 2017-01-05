@@ -1,6 +1,6 @@
 <?php
 //require reusable code in a file, like functions, etc at the top here:
-require 'vendor/autoload.php';
+require 'vendor/autoload.php'; //* This file needs to be included at our entry point in order to have composer autoload the classes in the project.
 require 'functions.php';
 require 'notes/Task.php';
 require 'core/bootstrap.php';
