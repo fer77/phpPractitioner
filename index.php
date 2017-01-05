@@ -27,6 +27,8 @@ $greeting = "Hello: ";
 
 //* This will require the file that is returned to us:
 //require Router::load('routes.php')->direct($uri);
- require Router::load('routes.php')->direct(Request::uri(), Request::method()); //* This will tell the router what type of request it is.
+//* We no longer need to require anything with our controller:
+// require
+            Router::load('routes.php')->direct(Request::uri(), Request::method()); //* This will tell the router what type of request it is.
                                   //* Router->direct determines the controller we require.
                                               //* Request::uri is required(loaded) in our bootstrap file.

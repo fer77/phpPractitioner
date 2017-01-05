@@ -20,11 +20,11 @@ class App
     static::$registry[$key] = $value;
   }
                   //* Comes from bootstrap.php 'App::get...'
-  public function get($key)
+  public static function get($key)
   {
     //* Check if the registry contains the array:
     if(! array_key_exists($key, static::$registry)) {
-      throw new Exception("No " . $key . " is bound in the container.");
+      throw new Exception("No {$key} is bound in the container.");
     }
 //* Fetch a value
     return static::$registry[$key];

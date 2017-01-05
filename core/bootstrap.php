@@ -25,4 +25,21 @@ App::bind('database', new QueryBuilder(
 //   Connection::make($app['config']['database'])
 // );
 
+function view($name, $data = [])
+{
+  extract($data); //* Does the oposite of compact. Extract is going to create a variable equal to the value passed, ie:
+                    //* ['name' => 'joe', 'age' = 25];
+                    //* extract will create a name and an age variable like this:
+                    //* $name = 'joe';
+                    //* $age = 25;
+
+  return require "views/{$name}.view.php";
+}
+
+function redirect($path)
+{
+
+  header("Location: /{$path}");
+}
+
  ?>

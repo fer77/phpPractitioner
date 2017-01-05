@@ -40,14 +40,37 @@
   public function direct($uri, $requestType)
   {
     //* example.com/about/culture
+    //die(var_dump($uri, $requestType));
     if (array_key_exists($uri, $this->routes[$requestType])) {
     //* array_key_exists will look through our array of routes and will look for a key that matches.
-    return $this->routes[$requestType][$uri];
+    //return $this->routes[$requestType][$uri]
+    //* PagesController@home.  Needs to be parse it, newup the controller, and call the method (all done dynamically).
+    //explode('@', $this->routes[$requestType][$uri]);
+    //die($this->routes[$requestType][$uri]);
+    return $this->callAction(
+      //* Splits up a string into items of an array.
+      ...explode('@', $this->routes[$requestType][$uri])
+      //* The splat operator (...) turns those items into arguments that we can then pass as $controller and $action to callAction.
+    );
 
     }
 
     throw new Exception('No route defined for this URI.'); //* Error to get if an URI that doesn't exist is typed.
 
+  }
+  protected function callAction($controller, $action)
+  {
+    //* New up the $controller
+    $controller = new $controller;
+    //* Check that this exists:
+    //die(var_dump($controller, $action));
+    if(! method_exists($controller, $action)) {
+      throw new Exception(
+        "{$controller} does not respond to the {$action} action."
+      );
+    }
+    
+    return $controller->$action();
   }
 }
 
