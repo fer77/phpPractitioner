@@ -3,9 +3,8 @@
 //* This is a basic form of a dependency injection container:
 //* A place to register/bind dependencies a regestry, like a storage or container.
 
-/**
- *
- */
+namespace App\Core;
+
 class App
 {
   //* Each time we bind into our application container, it will be stored in here:

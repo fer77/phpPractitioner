@@ -1,5 +1,9 @@
 <?php
 
+//* namespace:
+//* instead of looking for instances simply "import it" like this:
+use App\Core\App;
+
 App::bind('config', require 'config.php'); //* This is saying: find the configuration array and store it in our container and associate it with a key named 'config'.  When we need this array we add the 'config' label and save it:
 //die(var_dump(App::get('config')));
 //* We'll need to run:
@@ -33,7 +37,7 @@ function view($name, $data = [])
                     //* $name = 'joe';
                     //* $age = 25;
 
-  return require "views/{$name}.view.php";
+  return require "app/views/{$name}.view.php";
 }
 
 function redirect($path)

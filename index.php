@@ -5,6 +5,8 @@ require 'functions.php';
 require 'notes/Task.php';
 require 'core/bootstrap.php';
 require 'notes/intro-pdo.php';
+use App\Core\Router;
+use App\Core\Request;
 //require 'arrays.php';
 //require 'booleans.php';
 //require 'functions-notes.php';
@@ -29,6 +31,6 @@ $greeting = "Hello: ";
 //require Router::load('routes.php')->direct($uri);
 //* We no longer need to require anything with our controller:
 // require
-            Router::load('routes.php')->direct(Request::uri(), Request::method()); //* This will tell the router what type of request it is.
+            Router::load('app/routes.php')->direct(Request::uri(), Request::method()); //* This will tell the router what type of request it is.
                                   //* Router->direct determines the controller we require.
                                               //* Request::uri is required(loaded) in our bootstrap file.

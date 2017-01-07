@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core;
+
   class Router
   {
     public $routes = [
@@ -60,6 +62,8 @@
   }
   protected function callAction($controller, $action)
   {
+    //* All of our controllers will be stored here.
+    $controller = "App\\Controllers\\{$controller}";
     //* New up the $controller
     $controller = new $controller;
     //* Check that this exists:
@@ -69,7 +73,7 @@
         "{$controller} does not respond to the {$action} action."
       );
     }
-    
+
     return $controller->$action();
   }
 }
